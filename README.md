@@ -21,6 +21,7 @@ After training and testing the individual models, in accordance with the recomme
 
 ```
 project_folder/
+├── ...
 └── results/
     ├── cephalo_line_0/
     │   └── test_latest/
@@ -38,6 +39,7 @@ project_folder/
 
 ```
 project_folder/
+├── ...
 └── results/
     ├── cephalo_line_0/
     │   └── best/
