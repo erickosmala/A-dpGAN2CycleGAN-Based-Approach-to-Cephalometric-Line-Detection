@@ -15,6 +15,15 @@ mask_folder/
 └── image_name_N/
 ```
 
+Structure of the folder containing the original images:
+```
+images_folder/
+└── image_name_1.png
+├── image_name_2.png
+│   ...
+└── image_name_N.png
+```
+
 After training and testing the individual models, in accordance with the recommendations of the respective authors of each solution, we should obtain test result folders following the structure below:
 
 - CycleGAN:
