@@ -43,7 +43,16 @@ Training is carried out according to the instructions provided by the software a
 
 where:
 - `MODEL_NAME` is the name assigned to a specific model (in our example, it consists of the model type (`cyclegan`, `dpgan`, or `oasis`), the name of the training set (`positives`, `negatives`, or `negatives_contrast`), and a number (`0`–`15`) indicating the cephalometric line number. For example: `dpgan_cephalo_lines_positives_0`,
-- `DATASET_PATH` is the path for prepared dataset by one of the scripts.
+- `DATASET_PATH` is the path for prepared dataset by one of the scripts. It should be noted that for CycleGAN, you also need to run the script provided by the software authors, datasets/combine_A_and_B.py, and provide its output path during training.
+
+## Testing 
+
+Just like the training process, the testing process is carried out according to the instructions provided by the software authors. How to start the testing process for each model category:
+- Cyclegan: `python test.py --dataroot DATASET_PATH --name MODEL_NAME --model test --netG unet_256 --direction AtoB --dataset_mode single --norm batch`
+- DP-GAN: `python test.py --name MODEL_NAME --dataset_mode ade20k --gpu_ids 0 --dataroot DATASET_PATH --batch_size 5`
+- OASIS: `python test.py --name MODEL_NAME --dataset_mode ade20k --gpu_ids 0 --dataroot DATASET_PATH --batch_size 5`
+
+When testing CycleGAN, you should set the dataroot to the B/val subfolder located in the prepared training/test dataset.
 
 ## Comparison of test results for individual models
  
@@ -86,6 +95,14 @@ project_folder/
     │   ...
     └── cephalo_line_15/
 ```
+
+Once the test results are ready, you can set `DATASET_PATH` to the path containing these test outputs and use it to perform MSE comparison with the provided script `compare_images.py`.
+By using this script, you will obtain a file containing the following information:
+
+- `model` – the name of the model,
+- `image_name` – the name of the specific file from the test set,
+- `MSE` – the Mean Squared Error value for the individual image,
+- `Normalised MSE <0; 1>` – the normalized MSE value within the range [0, 1].
 
 
 
