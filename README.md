@@ -1,5 +1,33 @@
 # dpgan2cyclegan
 
+## Generation of training sets derived from original datasets
+The preparation of the training datasets referred to in the article as `negatives` and `negatives with contrast` is performed using the opencv-python library. The image generation process is applied to the original set of X-ray images, while the masks, for obvious reasons, are not subjected to any augmentation.
+
+- Generation of the `negative` dataset:
+```
+if not os.path.exists(OUTPUT_PATH):
+    os.mkdir(OUTPUT_PATH)
+
+for img_path in os.listdir(PATH_TO_IMAGES):
+    image = cv2.imread(f"{PATH_TO_IMAGES}/{img_path}")
+    negative = cv2.bitwise_not(image)
+    cv2.imwrite(f"{OUTPUT_PATH}/{img_path}", negative)
+```
+
+- Generation of the `negatives with contrast` dataset:
+```
+if not os.path.exists(OUTPUT_PATH):
+    os.mkdir(OUTPUT_PATH)
+
+alpha = 0.5
+beta = 0
+
+for img_path in os.listdir(PATH_TO_IMAGES):
+    image = cv2.imread(f"{PATH_TO_IMAGES}/{img_path}")
+    contrast_img = cv2.convertScaleAbs(image, alpha=alpha, beta=beta)
+    cv2.imwrite(f"{OUTPUT_PATH}/{img_path}", negative)
+```
+
 ## Structure of the folder with images and cephalometric lines
 
 Structure of the folder containing the original masks:
