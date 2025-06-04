@@ -104,6 +104,7 @@ By using this script, you will obtain a file containing the following informatio
 - `MSE` – the Mean Squared Error value for the individual image,
 - `Normalised MSE <0; 1>` – the normalized MSE value within the range [0, 1].
 
+## Plot generation
 
-
+To generate the data points used in the `LaTeX` plots (identical to those included in our paper), one should use the provided `generate_points_for_latex.py` script. This script outputs all the necessary information required to produce the aforementioned plots.
   
