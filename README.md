@@ -3,7 +3,7 @@
 ## Generation of training sets derived from original datasets
 The preparation of the training datasets referred to in the article as `negatives` and `negatives with contrast` is performed using the opencv-python library. The image generation process is applied to the original set of X-ray images, while the masks, for obvious reasons, are not subjected to any augmentation.
 
-- Generation of the `negative` dataset:
+- Generation of the `negatives` dataset:
 ```
 if not os.path.exists(OUTPUT_PATH):
     os.mkdir(OUTPUT_PATH)
