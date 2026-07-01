@@ -1,7 +1,31 @@
-# dpgan2cyclegan
+# A dpGAN2CycleGAN-Based Approach to Cephalometric Line Detection
+
+Paper | [Data](https://zenodo.org/uploads/15595262)
+
+[Eryk Kosmala](https://orcid.org/my-orcid?orcid=0009-0008-3953-1622)<sup>1</sup>, [Maciej Antczak](https://orcid.org/0000-0002-5320-2023)<sup>1,2</sup>, ... and [Jędrzej Musiał](https://www.cs.put.poznan.pl/jmusial/)<sup>1</sup>
+
+<sup>1</sup>Institute of Computing Science European Centre for Bioinformatics and Genomics, Poznan University of Technology, 60-965 Poznan, Poland
+
+<sup>2</sup>Institute of Bioorganic Chemistry, Polish Academy of Sciences, 61-704 Poznan, Poland
+
+<sup>3</sup>
+
+This is the official implementation of the paper "Can the Cephalometric Landmark Annotation Problem Be Solved By Generative Adversarial Networks? A case study.".
+
+## About
+This project presents a workflow for generating cephalometric lines from skull X-ray images. The pipeline consists of three main stages. First, a DP-GAN model is trained to detect and predict the initial position of a selected cephalometric line, providing a coarse localization. Next, a CycleGAN-based refinement stage improves the predicted output by enhancing its shape, continuity, and visual sharpness, resulting in a more anatomically consistent representation. Finally, the refined line is converted into a vector format (SVG) using OpenCV in combination with the Potrace library. This step enables scalable, editable vector outputs suitable for further analysis and integration into downstream applications. Together, the proposed approach combines deep learning–based localization and refinement with classical vectorization techniques to produce accurate and editable cephalometric line representations from radiographic images.
+
+![alt text](https://github.com/erickosmala/Combined-DP-GAN-and-CycleGAN-Method/blob/main/images/dpgan2cyclegan2svg_part1.png "Model part 1")
+![alt text](https://github.com/erickosmala/Combined-DP-GAN-and-CycleGAN-Method/blob/main/images/dpgan2cyclegan2svg_part2.png "Model part 2")
+![alt text](https://github.com/erickosmala/Combined-DP-GAN-and-CycleGAN-Method/blob/main/images/dpgan2cyclegan2svg_part3.png "Model part 3")
+
+## Prerequisites
+`Python >= 3.10` and `CUDA >= 11.7`
 
 ## Generation of training sets derived from original datasets
 The preparation of the training datasets referred to in the article as `negatives` and `negatives with contrast` is performed using the opencv-python library. The image generation process is applied to the original set of X-ray images, while the masks, for obvious reasons, are not subjected to any augmentation.
+
+
 
 - Generation of the `negatives` dataset:
 ```
