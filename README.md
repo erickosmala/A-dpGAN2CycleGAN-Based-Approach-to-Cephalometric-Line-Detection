@@ -15,9 +15,7 @@ This is the official implementation of the paper "Can the Cephalometric Landmark
 ## About
 This project presents a workflow for generating cephalometric lines from skull X-ray images. The pipeline consists of three main stages. First, a DP-GAN model is trained to detect and predict the initial position of a selected cephalometric line, providing a coarse localization. Next, a CycleGAN-based refinement stage improves the predicted output by enhancing its shape, continuity, and visual sharpness, resulting in a more anatomically consistent representation. Finally, the refined line is converted into a vector format (SVG) using OpenCV in combination with the Potrace library. This step enables scalable, editable vector outputs suitable for further analysis and integration into downstream applications. Together, the proposed approach combines deep learning–based localization and refinement with classical vectorization techniques to produce accurate and editable cephalometric line representations from radiographic images.
 
-![alt text](https://github.com/erickosmala/Combined-DP-GAN-and-CycleGAN-Method/blob/main/images/dpgan2cyclegan2svg_part1.png "Model part 1")
-![alt text](https://github.com/erickosmala/Combined-DP-GAN-and-CycleGAN-Method/blob/main/images/dpgan2cyclegan2svg_part2.png "Model part 2")
-![alt text](https://github.com/erickosmala/Combined-DP-GAN-and-CycleGAN-Method/blob/main/images/dpgan2cyclegan2svg_part3.png "Model part 3")
+![Diagram illustrating how the model works](https://github.com/erickosmala/A-dpGAN2CycleGAN-Based-Approach-to-Cephalometric-Line-Detection/blob/main/images/dpgan2cyclegan2svg.png "Model")
 
 ## Prerequisites
 `Python >= 3.10` and `CUDA >= 11.7`
