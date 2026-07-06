@@ -1,8 +1,8 @@
 # A dpGAN2CycleGAN-Based Approach to Cephalometric Line Detection
 
-Paper | [Data](https://zenodo.org/uploads/15595262)
+Paper | [Data](https://zenodo.org/records/15595262)
 
-[Eryk Kosmala](https://orcid.org/my-orcid?orcid=0009-0008-3953-1622)<sup>1</sup>, [Maciej Antczak](https://orcid.org/0000-0002-5320-2023)<sup>1,2</sup>, ... and [Jędrzej Musiał](https://www.cs.put.poznan.pl/jmusial/)<sup>1</sup>
+[Eryk Kosmala](https://orcid.org/my-orcid?orcid=0009-0008-3953-1622)<sup>1</sup>, [Maciej Antczak](https://orcid.org/0000-0002-5320-2023)<sup>1,2</sup>, ... and [Jędrzej Musiał](https://orcid.org/0000-0003-3018-5010)<sup>1</sup>
 
 <sup>1</sup>Institute of Computing Science European Centre for Bioinformatics and Genomics, Poznan University of Technology, 60-965 Poznan, Poland
 
