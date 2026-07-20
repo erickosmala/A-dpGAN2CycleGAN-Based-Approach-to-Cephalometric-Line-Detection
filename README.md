@@ -2,13 +2,15 @@
 
 Paper | [Data](https://zenodo.org/records/15595262)
 
-[Eryk Kosmala](https://orcid.org/0009-0008-3953-1622)<sup>1</sup>, [Maciej Antczak](https://orcid.org/0000-0002-5320-2023)<sup>1,2</sup>, [Kaja Szwarczyńska](https://orcid.org/0000-0003-0645-0064)<sup>3</sup>, [Ivo Domagała](https://orcid.org/0000-0002-7976-0605)<sup>3</sup>, Barbara Biedziak<sup>3</sup> and [Jędrzej Musiał](https://orcid.org/0000-0003-3018-5010)<sup>1</sup>
+[Eryk Kosmala](https://orcid.org/0009-0008-3953-1622)<sup>1</sup>, [Maciej Antczak](https://orcid.org/0000-0002-5320-2023)<sup>1,2</sup>, [Kaja Szwarczyńska](https://orcid.org/0000-0003-0645-0064)<sup>3</sup>, [Ivo Domagała](https://orcid.org/0000-0002-7976-0605)<sup>3</sup>, Barbara Biedziak<sup>3</sup>, Yong Zhang<sup>4</sup> and [Jędrzej Musiał](https://orcid.org/0000-0003-3018-5010)<sup>1</sup>
 
 <sup>1</sup>Institute of Computing Science European Centre for Bioinformatics and Genomics, Poznan University of Technology, 60-965 Poznan, Poland
 
 <sup>2</sup>Institute of Bioorganic Chemistry, Polish Academy of Sciences, 61-704 Poznan, Poland
 
 <sup>3</sup>Department of Orthodontics and Craniofacial Anomalies, Poznan University of Medical Sciences, Fredry 10, 60-812 Poznan, Poland
+
+<sup>4</sup>Shenzhen Institutes of Advanced Technology, Chinese Academy of Sciences, China
 
 This is the official implementation of the paper "Can the Cephalometric Landmark Annotation Problem Be Solved By Generative Adversarial Networks? A case study.".
 
